@@ -268,14 +268,22 @@ function checkAnswer(selected) {
 
 function nextQuestion() {
     currentQuestion++; // התקדמות לשאלה הבאה
-    updateProgressBar(); // עדכן את פס ההתקדמות אחרי עדכון השאלה הנוכחית
+    updateProgressBar(); // עדכן את פס ההתקדמות
     if (currentQuestion < questions.length) {
         loadQuestion(); // טען את השאלה הבאה
         document.getElementById("next-button").style.display = "none"; // הסתר את כפתור "שאלה הבאה"
     } else {
-        document.getElementById("quiz-container").innerHTML = "<h2>סיימת את החידון! כל הכבוד 🎉</h2>";
+        const quizContainer = document.getElementById("quiz-container");
+        if (correctAnswers === questions.length) {
+            // הודעה מיוחדת למי שענה על הכל נכון
+            quizContainer.innerHTML = `<h2>מזל טוב מלך 👑 ענית על הכל נכון!</h2>`;
+        } else {
+            // הודעה רגילה
+            quizContainer.innerHTML = `<h2>סיימת את החידון! כל הכבוד 🎉</h2><p>ענית נכון על ${correctAnswers} מתוך ${questions.length} שאלות.</p>`;
+        }
     }
 }
+
 
 
 function updateProgressBar() {
