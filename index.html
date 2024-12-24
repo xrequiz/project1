@@ -76,10 +76,10 @@ p {
 }
 .options button {
     display: block;
-    width: 100%;
-    margin: 10px 0;
+    width: 20%; /* רוחב הכפתור קטן יותר */
+    margin: 10px auto; /* מרכז את הכפתור */
     padding: 15px;
-    font-size: 18px;
+    font-size: 22px;
     color: #ffffff;
     background-color: #3498db; /* כחול בהיר */
     border: none;
@@ -88,15 +88,18 @@ p {
     transition: all 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* צל קל */
 }
+
 .options button:hover {
     background-color: #2980b9; /* כחול כהה יותר */
     transform: scale(1.05); /* הגדלה קלה בעת רחף */
 }
+
 .options button:active {
     background-color: #1f618d; /* כחול כהה יותר בעת לחיצה */
     transform: scale(0.98); /* הקטנה קלה בעת לחיצה */
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
+
 
         .result {
             font-weight: bold;
@@ -174,7 +177,7 @@ body {
         <p id="score-board">0/23</p>
     </div>
     
-    <h1>החידון הפסיכומטרי שלך</h1>
+    <h1>חידון הפסיכומטרי הגדול</h1>
 <p>ענה על השאלות ובדוק כמה אתה מוכן! 🚀</p>
 
     <div id="quiz-container">
