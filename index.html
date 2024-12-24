@@ -55,9 +55,9 @@ p {
 }
 
         .quiz-container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 90%; /* מיכל השאלות מוגבל ל-90% מרוחב המסך */
+    margin: 0 auto; /* מרכז את המיכל */
+    padding: 15px;
             border: 1px solid #ddd;
             border-radius: 10px;
             background-color: #fff;
@@ -164,6 +164,26 @@ body {
         background-position: 0% 50%;
     }
 }
+@media (max-width: 768px) {
+    .options button {
+        width: 80%; /* הכפתורים יהיו רחבים יותר במסכים קטנים */
+        font-size: 16px; /* גודל טקסט מותאם למובייל */
+    }
+
+    h1 {
+        font-size: 28px; /* כותרת קטנה יותר במובייל */
+    }
+
+    .question-container {
+        font-size: 18px; /* טקסט קטן יותר לשאלות */
+    }
+
+    #next-button {
+        font-size: 16px; /* גודל כפתור שאלה הבאה מותאם */
+        padding: 12px 20px; /* כפתור קטן יותר */
+    }
+}
+
 
     </style>
 </head>
